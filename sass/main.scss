@@ -1,0 +1,26 @@
+// Общие стили
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./base/reset";
+@import "./base/common";
+
+// Шапка
+@import "./components/header";
+@import "./components/mob-menu";
+
+// Веб студия
+@import "./components/webstudio/hero";
+@import "./components/webstudio/features";
+@import "./components/webstudio/specification";
+@import "./components/webstudio/team";
+@import "./components/webstudio/clients";
+
+// Футер
+@import "./components/footer";
+
+// Портфолио
+@import "./components/portfolio/filter";
+@import "./components/portfolio/examples";
+
+// Модальное окно
+@import "./components/modal";

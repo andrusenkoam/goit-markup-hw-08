@@ -1,0 +1,94 @@
+.section--bg-color {
+  background-color: var(--team-bg-color);
+}
+
+.team-list {
+  @include min-tablet {
+    display: flex;
+    margin-left: -30px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+    margin-top: -30px;
+  }
+}
+
+.team-list__item {
+  @include max-mobile {
+    max-width: 100%;
+  }
+
+  @include min-tablet {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+
+  @include min-desctop {
+    flex-basis: calc(100% / 4 - 30px);
+    margin-top: 0;
+  }
+}
+
+.team-list__item:not(:last-child) {
+  @include max-mobile {
+    margin-bottom: 30px;
+  }
+}
+
+.team-card {
+  padding-top: 30px;
+  padding-right: 32px;
+  padding-bottom: 30px;
+  padding-left: 32px;
+  border-radius: 0 0 4px 4px;
+  background-color: var(--primary-bg-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.team-card__title {
+  margin-bottom: 10px;
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.team-card__text {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.card-list {
+  display: flex;
+  justify-content: center;
+}
+
+.card-list__item {
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+}
+
+.card-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: #afb1b8;
+  transition: background-color var(--time-duration) var(--time-func),
+    fill var(--time-duration) var(--time-func);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    fill: var(--secondary-title-color);
+  }
+}
